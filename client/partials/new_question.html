@@ -1,0 +1,9 @@
+<div ng-controller='dashboard_controller'>
+  <a href="/logout">Logout</a>
+  <a href="#/dashboard">Home</a>
+  <h1>New Question!</h1>
+  <h3>Question: </h3><textarea name="question" rows="8" cols="40" ng-model='newQuestion.question'></textarea><br>
+  <h3>Description (optional): </h3><textarea name="description" rows="8" cols="40" ng-model='newQuestion.description'></textarea><br>
+  <button type="submit" ng-click='goback()'>Cancel (will redirect to dashboard)</button>
+  <button type="submit" ng-click='submitQuestion()'>Submit!</button>
+</div>

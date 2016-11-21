@@ -1,0 +1,14 @@
+<div ng-controller='answer_controller'>
+  <a href="#/dashboard">Home</a>
+  <a href="#/show/{{oneQuestion._id}}">Go back to the Question!</a>
+
+  <h1>{{oneQuestion[0].question}}</h1>
+  <h3>{{oneQuestion[0].description}}</h3>
+  <h3>Your answer: </h3><textarea name="question" rows="8" cols="40" ng-model='newAnswer.answer'></textarea><br>
+  <h3>Supporting details for your answer (optional): </h3><textarea name="description" rows="8" cols="40" ng-model='newAnswer.description'></textarea><br>
+  <button type="submit" ng-click='goback()'>Cancel (will redirect to dashboard)</button>
+  <button type="submit" ng-click='submitAnswer()'>Submit!</button><br>
+
+  <a href="/logout">Click to Logout</a>
+
+</div>

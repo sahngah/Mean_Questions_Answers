@@ -1,0 +1,14 @@
+<div ng-controller='answer_controller'>
+  <a href="/logout">Logout</a>
+  <a href="#/dashboard">Home</a>
+  <a href="#/answer/{{oneQuestion._id}}">Answer this Question!</a>
+  <h1>{{oneQuestion.question}}</h1>
+  <h3>{{oneQuestion.description}}</h3>
+  <div ng-repeat='answer in oneQuestion.answer'>
+    <p>{{answer.user}}</p>
+    <p>{{answer.answer}}</p>
+    <p>{{answer.description}}</p>
+    <p>{{answer.like}}</p>
+    <button type="button" name="button" ng-click='like(answer._id)'>Like!</button>
+  </div>
+</div>
